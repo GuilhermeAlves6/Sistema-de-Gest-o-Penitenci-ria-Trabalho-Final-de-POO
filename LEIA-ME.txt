@@ -1,0 +1,50 @@
+SISTEMA DE GESTÃO PENITENCIÁRIA — GRUPO 9
+
+REQUISITOS
+- Java JDK instalado (Java 8 ou superior).
+- Todos os arquivos .java devem permanecer nesta pasta.
+
+COMO EXECUTAR
+1. Abra o terminal nesta pasta (Projeto_Grupo9).
+2. No PowerShell, compile:
+   javac -encoding UTF-8 (Get-ChildItem -Filter '*.java' | ForEach-Object { $_.FullName })
+3. Execute: java Principal
+
+O programa carrega os registros da pasta dados/ ao iniciar e os salva após
+cada operação que altera o sistema, além de salvar novamente ao encerrar.
+Os arquivos de exemplo já cadastrados estão em dados/:
+presos.txt, policiais.txt, celas.txt, crimes.txt, visitas.txt e refeicoes.txt.
+
+CONCEITOS DE POO
+- Abstração: Pessoa e RegistroPenitenciario são classes abstratas.
+- Herança: Preso e PolicialPenal herdam de Pessoa; Crime, Visita e Refeicao
+  herdam de RegistroPenitenciario.
+- Polimorfismo: Penitenciaria.listarPessoas() e listarRegistrosTematicos()
+  chamam exibirDados() por referências Pessoa e RegistroPenitenciario.
+- Encapsulamento: atributos privados e setters com validação.
+- Persistência: Armazenamento lê e grava arquivos TXT em UTF-8.
+
+DOCUMENTAÇÃO DA ETAPA
+- Diagrama de classes: DIAGRAMA.md
+- Tabela de rastreabilidade: RASTREABILIDADE.md
+
+DECLARAÇÃO DE USO DE INTELIGÊNCIA ARTIFICIAL
+Foi utilizado um assistente de IA (Copilot SDK no VS Code) como apoio para
+analisar os requisitos da Etapa II, sugerir e implementar alterações no código,
+preparar os arquivos de dados de exemplo e elaborar a documentação desta etapa.
+O apoio de IA abrangeu:
+- Principal.java: menu, edição de preso, relatório de ocupação e validação de entrada.
+- Penitenciaria.java: edição de preso, atualização da ocupação e listagem polimórfica.
+- Pessoa.java, Preso.java, PolicialPenal.java e Cela.java: validação e encapsulamento.
+- RegistroPenitenciario.java, Crime.java, Visita.java e Refeicao.java:
+  segunda hierarquia e sobrescrita de métodos.
+- Armazenamento.java: comentário sobre a leitura dos arquivos TXT.
+- DIAGRAMA.md e RASTREABILIDADE.md: elaboração do diagrama e mapeamento
+  dos requisitos para o código.
+- dados/*.txt: preparação dos registros fictícios de exemplo.
+
+O grupo deve revisar o material, confirmar que compreende as alterações e
+adequar esta declaração às regras da disciplina antes da entrega.
+
+Use somente dados fictícios na apresentação. Este projeto acadêmico não deve
+ser usado para armazenar dados reais ou sensíveis.
